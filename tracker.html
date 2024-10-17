@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Health Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 90%;
+            margin-top: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .tracker {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .tracker div {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        label {
+            color: #555;
+        }
+        input, button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        .summary {
+            margin-top: 20px;
+            text-align: center;
+            color: #333;
+            display: none;
+        }
+        @media (min-width: 768px) {
+            .tracker {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .tracker div {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Health Tracker</h1>
+        <div class="tracker">
+            <div>
+                <label for="water">Water Intake (cups):</label>
+                <input type="number" id="water" min="0">
+            </div>
+            <div>
+                <label for="exercise">Exercise (minutes):</label>
+                <input type="number" id="exercise" min="0">
+            </div>
+            <div>
+                <label for="sleep">Sleep (hours):</label>
+                <input type="number" id="sleep" min="0">
+            </div>
+        </div>
+        <button onclick="calculateSummary()">Submit</button>
+        <div class="summary" id="summary"></div>
+    </div>
+
+    <script>
+        function calculateSummary() {
+            const water = document.getElementById('water').value;
+            const exercise = document.getElementById('exercise').value;
+            const sleep = document.getElementById('sleep').value;
+
+            const recommendedWater = 8; // cups
+            const recommendedExercise = 30; // minutes
+            const recommendedSleep = 8; // hours
+
+            const waterStatus = water >= recommendedWater ? 'Good job!' : `You need ${recommendedWater - water} more cups.`;
+            const exerciseStatus = exercise >= recommendedExercise ? 'Well done!' : `You need ${recommendedExercise - exercise} more minutes.`;
+            const sleepStatus = sleep >= recommendedSleep ? 'Great!' : `You need ${recommendedSleep - sleep} more hours.`;
+
+            let summaryText = `Today's Summary:\n\n`;
+            summaryText += `Water Intake: ${water} cups (${waterStatus})\n`;
+            summaryText += `Exercise: ${exercise} minutes (${exerciseStatus})\n`;
+            summaryText += `Sleep: ${sleep} hours (${sleepStatus})`;
+
+            const summaryDiv = document.getElementById('summary');
+            summaryDiv.textContent = summaryText;
+            summaryDiv.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

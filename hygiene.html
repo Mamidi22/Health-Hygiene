@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health and Hygiene</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .section {
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #e9ecef;
+        }
+
+        .section h2 {
+            margin-top: 0;
+        }
+
+        .section img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        @media (min-width: 768px) {
+            .content {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .section {
+                flex: 1;
+                margin: 10px;
+            }
+
+            .section img {
+                max-width: 100%;
+            }
+        }
+
+        .contact-form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact-form label {
+            font-weight: bold;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #575757;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            text-align: center;
+            display: none;
+        }
+
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Health and Hygiene</h1>
+            <p>Learn how to maintain your health and hygiene for a better life.</p>
+        </header>
+
+        <div class="content">
+            <div class="section">
+                <h2>Personal Hygiene</h2>
+                <p>Personal hygiene involves those practices performed by an individual to care for one's bodily health and well-being through cleanliness. This includes regular handwashing, brushing and flossing teeth, and bathing.</p>
+                <img src="h4.jpg" alt="Personal Hygiene">
+            </div>
+
+            <div class="section">
+                <h2>Healthy Eating</h2>
+                <p>A balanced diet is crucial for maintaining good health. Incorporate a variety of fruits, vegetables, lean proteins, and whole grains into your diet. Stay hydrated by drinking plenty of water.</p>
+                <img src="images.jpg" alt="Healthy Eating">
+            </div>
+
+            <div class="section">
+                <h2>Exercise</h2>
+                <p>Regular physical activity helps to improve overall health and fitness. Aim for at least 30 minutes of moderate exercise most days of the week.</p>
+                <img src="h3.jjpg.jpg" alt="Exercise">
+            </div>
+        </div>
+
+        <!--<div class="section contact-section">
+            <h2>Contact Us</h2>
+            <form id="contact-form" class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+            <div id="result" class="result"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (name && email && message) {
+                const resultDiv = document.getElementById('result');
+                resultDiv.style.display = 'block';
+                resultDiv.classList.add('success');
+                resultDiv.classList.remove('error');
+                resultDiv.textContent = 'Your message has been sent successfully!';
+
+                // Simulate a form submission by clearing the form
+                document.getElementById('contact-form').reset();
+            } else {
+                const resultDiv = document.getElementById('result');
+                resultDiv.style.display = 'block';
+                resultDiv.classList.add('error');
+                resultDiv.classList.remove('success');
+                resultDiv.textContent = 'Please fill out all fields.';
+            }
+        });
+    </script>
+</body>
+</html>

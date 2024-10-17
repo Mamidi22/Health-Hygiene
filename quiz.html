@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health and Hygiene Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:rgb(171, 189, 155);
+            margin: 0;
+            padding: 20px;
+            /*background-image: url(quiz.webp);
+            background-size: cover;*/
+        }
+        .container {
+            background-color: rgb(214, 245, 242);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .options input {
+            margin-right: 10px;
+        }
+        .feedback {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .correct-answer {
+            color: green;
+        }
+        .wrong-answer {
+            color: red;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Health and Hygiene Quiz</h2>
+        <form id="quizForm" onsubmit="return false;">
+            <div class="question">
+                <p>1. Which of the following is a correct handwashing technique?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="a"> Scrubbing hands with water only</label>
+                    <label><input type="radio" name="q1" value="b"> Using soap and water for at least 20 seconds</label>
+                    <label><input type="radio" name="q1" value="c"> Using hand sanitizer</label>
+                    <label><input type="radio" name="q1" value="d"> Wiping hands with a towel</label>
+                </div>
+                <div class="feedback" id="q1Feedback"></div>
+            </div>
+
+            <div class="question">
+                <p>2. How often should you brush your teeth for optimal dental hygiene?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="a"> Once a week</label>
+                    <label><input type="radio" name="q2" value="b"> Twice a day</label>
+                    <label><input type="radio" name="q2" value="c"> Once a day</label>
+                    <label><input type="radio" name="q2" value="d"> Only when they feel dirty</label>
+                </div>
+                <div class="feedback" id="q2Feedback"></div>
+            </div>
+
+            <div class="question">
+                <p>3. Which of these foods is a good source of vitamin C?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="a"> Milk</label>
+                    <label><input type="radio" name="q3" value="b"> Apples</label>
+                    <label><input type="radio" name="q3" value="c"> Bread</label>
+                    <label><input type="radio" name="q3" value="d"> Steak</label>
+                </div>
+                <div class="feedback" id="q3Feedback"></div>
+            </div>
+
+            <div class="question">
+                <p>4. How long should you exercise daily for good physical health?</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="a"> 5 minutes</label>
+                    <label><input type="radio" name="q4" value="b"> 30 minutes</label>
+                    <label><input type="radio" name="q4" value="c"> 2 hours</label>
+                    <label><input type="radio" name="q4" value="d"> No need to exercise</label>
+                </div>
+                <div class="feedback" id="q4Feedback"></div>
+            </div>
+
+            <div class="question">
+                <p>5. What is the recommended way to store leftovers for food safety?</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="a"> Leave them uncovered</label>
+                    <label><input type="radio" name="q5" value="b"> Store them in airtight containers</label>
+                    <label><input type="radio" name="q5" value="c"> Leave them on the counter</label>
+                    <label><input type="radio" name="q5" value="d"> Throw them away</label>
+                </div>
+                <div class="feedback" id="q5Feedback"></div>
+            </div>
+
+            <div class="question">
+                <p>6. What should you do before handling food to prevent contamination?</p>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="a"> Wash your hands</label>
+                    <label><input type="radio" name="q6" value="b"> Wear gloves</label>
+                    <label><input type="radio" name="q6" value="c"> Neither</label>
+                    <label><input type="radio" name="q6" value="d"> Both</label>
+                </div>
+                <div class="feedback" id="q6Feedback"></div>
+            </div>
+
+            <div class="question">
+                <p>7. Which of these can help reduce stress?</p>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="a"> Watching TV all day</label>
+                    <label><input type="radio" name="q7" value="b"> Sleeping less</label>
+                    <label><input type="radio" name="q7" value="c"> Regular physical activity</label>
+                    <label><input type="radio" name="q7" value="d"> Eating junk food</label>
+                </div>
+                <div class="feedback" id="q7Feedback"></div>
+            </div>
+
+            <div class="question">
+                <p>8. How often should you wash your bed sheets for good hygiene?</p>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="a"> Once a year</label>
+                    <label><input type="radio" name="q8" value="b"> Once every 6 months</label>
+                    <label><input type="radio" name="q8" value="c"> Once a month</label>
+                    <label><input type="radio" name="q8" value="d"> Once a week</label>
+                </div>
+                <div class="feedback" id="q8Feedback"></div>
+            </div>
+
+            <div class="question">
+                <p>9. Which of these can help prevent the spread of germs?</p>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="a"> Sneezing into your hands</label>
+                    <label><input type="radio" name="q9" value="b"> Using a tissue</label>
+                    <label><input type="radio" name="q9" value="c"> Wiping your nose with your sleeve</label>
+                    <label><input type="radio" name="q9" value="d"> Not covering your mouth</label>
+                </div>
+                <div class="feedback" id="q9Feedback"></div>
+            </div>
+
+            <div class="question">
+                <p>10. Which of the following is a symptom of dehydration?</p>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="a"> Dry skin</label>
+                    <label><input type="radio" name="q10" value="b"> Excessive thirst</label>
+                    <label><input type="radio" name="q10" value="c"> Watery eyes</label>
+                    <label><input type="radio" name="q10" value="d"> Running nose</label>
+                </div>
+                <div class="feedback" id="q10Feedback"></div>
+            </div>
+
+            <button type="button" class="btn" onclick="submitQuiz()">Submit Quiz</button>
+        </form>
+    </div>
+
+    <script>
+        function submitQuiz() {
+            resetFeedback();
+
+            const correctAnswers = ['b', 'b', 'b', 'b', 'b', 'd', 'c', 'c', 'b', 'b'];
+            let score = 0;
+
+            for (let i = 1; i <= 10; i++) {
+                const selectedOption = document.querySelector(`input[name=q${i}]:checked`);
+
+                if (selectedOption) {
+                    const userAnswer = selectedOption.value;
+
+                    if (userAnswer === correctAnswers[i - 1]) {
+                        score++;
+                    } else {
+                        const feedback = document.getElementById(`q${i}Feedback`);
+                        feedback.innerHTML = `Your answer <span class="wrong-answer">${userAnswer}</span> is incorrect. The correct answer is <span class="correct-answer">${correctAnswers[i - 1]}</span>.`;
+                    }
+                } else {
+                    const feedback = document.getElementById(`q${i}Feedback`);
+                    feedback.innerHTML = `Please select an answer.`;
+                }
+            }
+
+            const quizForm = document.getElementById('quizForm');
+            const scoreMessage = document.createElement('p');
+            scoreMessage.textContent = `You scored ${score} out of 10.`;
+            quizForm.appendChild(scoreMessage);
+        }
+
+        function resetFeedback() {
+            for (let i = 1; i <= 10; i++) {
+                const feedback = document.getElementById(`q${i}Feedback`);
+                feedback.textContent = '';
+            }
+        }
+    </script>
+</body>
+</html>

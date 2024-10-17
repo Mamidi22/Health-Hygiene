@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Diet Plan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:disabled {
+            background-color: #ccc;
+        }
+        #dietPlan {
+            display: none;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+   <!-- <div class="container" id="loginForm">
+        <h2>Login</h2>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" required>
+        </div>
+        <button class="btn" onclick="login()">Login</button>
+        <p class="error" id="loginError"></p>
+    </div>
+    -->
+
+    <div class="container" id="dietPlan">
+        <h2>Diet Plan</h2>
+        <div class="form-group">
+            <label for="height">Height (cm)</label>
+            <input type="number" id="height" min="50" max="300" required>
+        </div>
+        <div class="form-group">
+            <label for="weight">Weight (kg)</label>
+            <input type="number" id="weight" min="10" max="500" required>
+        </div>
+        <button class="btn" onclick="calculateDietPlan()">Get Diet Plan</button>
+        <p id="bmiResult"></p>
+        <div id="dietResult"></div>
+    </div>
+
+    <script>
+        /*function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const loginError = document.getElementById('loginError');
+
+            if (username === 'user' && password === 'password') {
+                document.getElementById('loginForm').style.display = 'none';
+                document.getElementById('dietPlan').style.display = 'block';
+            } else {
+                loginError.textContent = 'Invalid username or password';
+            }
+        }
+*/
+        function calculateDietPlan() {
+            const height = parseFloat(document.getElementById('height').value);
+            const weight = parseFloat(document.getElementById('weight').value);
+            const bmiResult = document.getElementById('bmiResult');
+            const dietResult = document.getElementById('dietResult');
+
+            if (isNaN(height) || isNaN(weight) || height <= 0 || weight <= 0) {
+                bmiResult.textContent = 'Please enter valid height and weight';
+                return;
+            }
+
+            const heightInMeters = height / 100;
+            const bmi = weight / (heightInMeters * heightInMeters);
+            bmiResult.textContent = `Your BMI is ${bmi.toFixed(2)}`;
+
+            let dietPlan = '';
+
+            if (bmi < 18.5) {
+                dietPlan = `
+                    <h3>Underweight Diet Plan</h3>
+                    <ul>
+                        <li>Breakfast: Oatmeal with fruits and nuts</li>
+                        <li>Lunch: Grilled chicken with quinoa and vegetables</li>
+                        <li>Snack: Greek yogurt with honey</li>
+                        <li>Dinner: Salmon with brown rice and steamed broccoli</li>
+                    </ul>
+                `;
+            } else if (bmi >= 18.5 && bmi < 24.9) {
+                dietPlan = `
+                    <h3>Normal Weight Diet Plan</h3>
+                    <ul>
+                        <li>Breakfast: Smoothie with spinach, banana, and almond milk</li>
+                        <li>Lunch: Turkey sandwich with whole grain bread and salad</li>
+                        <li>Snack: Carrot sticks with hummus</li>
+                        <li>Dinner: Chicken stir-fry with mixed vegetables</li>
+                    </ul>
+                `;
+            } else if (bmi >= 25 && bmi < 29.9) {
+                dietPlan = `
+                    <h3>Overweight Diet Plan</h3>
+                    <ul>
+                        <li>Breakfast: Avocado toast with poached egg</li>
+                        <li>Lunch: Grilled fish with a side of mixed greens</li>
+                        <li>Snack: Apple slices with peanut butter</li>
+                        <li>Dinner: Vegetable soup with a side of whole grain bread</li>
+                    </ul>
+                `;
+            } else {
+                dietPlan = `
+                    <h3>Obesity Diet Plan</h3>
+                    <ul>
+                        <li>Breakfast: Scrambled eggs with spinach and tomato</li>
+                        <li>Lunch: Lentil salad with a variety of vegetables</li>
+                        <li>Snack: Celery sticks with low-fat cheese</li>
+                        <li>Dinner: Baked chicken breast with steamed vegetables</li>
+                    </ul>
+                `;
+            }
+
+            dietResult.innerHTML = dietPlan;
+        }
+    </script>
+</body>
+</html>

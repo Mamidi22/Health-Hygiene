@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Here Box Under Photo</title>
+    <style>
+        /* Centering the image and "Click Here" box */
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* Style for the image */
+        .image-container img {
+            width: 800px; /* Adjust the width as needed */
+            height: 800px;
+            height: auto;
+        }
+
+        /* Style for the "Click Here" box */
+        .click-here-box {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Hover effect for the box */
+        .click-here-box:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="image-container">
+            <img src="doctor.jpg" alt="Image">
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhEgmHcXtczQPmJZrV6ZAp1Yga2Kymdb7t_W32JqyiNhVOFw/viewform?embedded=true" class="click-here-box">Book Appointment</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health and Hygiene</title>
+    <link rel="stylesheet" href="he.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#tips">Health Tips</a></li>
+                <li><a href="#hygiene">Hygiene Practices</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home">
+            <h1>Welcome to Health and Hygiene</h1>
+            <p>Your guide to better health and hygiene practices.</p>
+            <img src="images/health_home.jpg" alt="Health and Hygiene">
+        </section>
+        
+        <section id="tips">
+            <h2>Health Tips</h2>
+            <p>Stay healthy with our expert tips.</p>
+            <img src="images/health_tips.jpg" alt="Health Tips">
+        </section>
+        
+        <section id="hygiene">
+            <h2>Hygiene Practices</h2>
+            <p>Learn the best practices for maintaining hygiene.</p>
+            <img src="images/hygiene_practices.jpg" alt="Hygiene Practices">
+        </section>
+        
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        
+        <section id="userDetails">
+            <!-- User details will be displayed here -->
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Health and Hygiene. All rights reserved.</p>
+    </footer>
+    
+    <!-- Modal -->
+    <div id="responseModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="responseMessage"></p>
+        </div>
+    </div>
+    
+    <script src="he.js"></script>
+</body>
+</html>
