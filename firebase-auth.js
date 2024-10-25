@@ -41,7 +41,7 @@ window.login = async () => {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
     //alert('Login successful!');
     console.log('User:', userCredential.user);
-    window.location.href = 'front_page.html';
+    window.location.href = 'Home.html';
   } catch (error) {
     console.error('Error logging in:', error);
     alert(error.message);

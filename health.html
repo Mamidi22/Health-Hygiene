@@ -1,0 +1,170 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health</title>
+    <link rel="stylesheet" href="front_page_css.css"> 
+</head>
+<body>
+    <section id="health-section" class="health">
+        <h1 class="section-title">Health</h1>
+        <div class="content-wrapper">
+            <img src="health2.webp" alt="Healthy Lifestyle" class="health-image">
+            <p class="health-description">
+                Life without good health is like an army without soldiers and chocolate without cocoa. Health is important to live life to the fullest. When a person leads a healthy lifestyle, the body remains healthy and the mind is active and fresh. Living a healthy life would extend longevity and regenerate the body and mind. Having good health is of core importance to human happiness. The state of complete physical, mental, and spiritual well-being is called health. Health consists of maintaining the body and taking preventive measures to reduce the possibility of developing various diseases. Health is the foundation of a vibrant and fulfilling life. It encompasses physical, mental, and emotional well-being, and prioritizing it is essential for achieving your personal goals and enjoying everyday activities. A balanced diet plays a crucial role in maintaining health; incorporating a variety of fruits, vegetables, whole grains, and lean proteins fuels the body and supports immune function.
+            </p>
+        </div>
+    
+        <div class="heading">
+            <h1 class="section-title">Types of Health</h1>
+        </div>
+      
+        <div class="box-container">
+            <div class="box">
+                <img src="personal-health.webp" style="height: 65%; width:90%" alt = "Personal Hygiene" class="hygiene-item-image">
+                <h3>Physical Health</h3>
+                <a href = "physical_health1.html" class="health-button">Click Here</a>
+            </div>
+            <div class="box">
+                <img src="mental-health2.jpg"  style="height: 60%; width:100%"alt="Mental Health" class="box-image">
+                <h3>Mental Health</h3>   
+                <a href="mental_health.html" class="health-button">Click Here</a>
+            </div>
+            <div class="box">
+                <img src="social2.jpg" style="height: 60%; width:100%" alt="Social Health" class="box-image">
+                <h3>Social Health</h3>
+                <a href="social_health.html" class="health-button">Click Here</a>
+            </div>
+            <div class="box">
+                <img src="env2.jpg" style="height: 60%; width:90%" alt="Environmental Health" class="box-image">
+                <h3>Environmental Health</h3>
+                <a href="environmental_health.html" class="health-button">Click Here</a>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        :root{
+  --primary: #1f2e88 ;
+  --secondary: #2f66d4 ;
+  --hover: #a2d9f5;
+  --black: #333;
+  --white: #fff;
+  --light-color: #666;
+  --light-bg: #eee;
+  --border:.2rem solid rgba(0,0,0,0.1);
+  --box-shadow:0 .5rem 1rem rgba(0,0,0,0.1);
+}
+html{
+  /*font-size: 62.2%;*/
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+  width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+  background: var(--primary);
+  border-radius: 5rem;
+}
+        .health {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        .section-title {
+            color: #023b6d;
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+    
+        .content-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+    
+        .health-image {
+            width: 40%;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+    
+        .health-description {
+            font-size: 1.1em;
+            text-align: justify;
+            padding: 0 20px;
+            line-height: 1.6;
+            color: #333;
+            flex: 1;
+        }
+    
+        .heading {
+            text-align: center;
+            margin: 20px 0;
+        }
+    
+        .types-title {
+            text-decoration: underline;
+            font-size: 24px;
+            color: #023b6d;
+        }
+    
+        .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+            /*height: 250px;*/
+            
+        }
+    
+        .box {
+            text-align: center;
+            width: 220px;
+            margin: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    
+        .box-image {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    
+        .health-button {
+            background-color: #e0f0ff;
+            color: #023b6d;
+            font-size: 16px;
+            border-radius: 10px;
+            font-weight: bold;
+            padding: 8px 15px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            margin-top: 10px;
+        }
+    
+        .health-button:hover {
+            background-color: #b0e0ff;
+        }
+    </style>
+    
+</body>
+</html>

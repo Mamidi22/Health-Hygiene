@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,400&display=swap');
+
+:root{
+  --primary: #1f2e88 ;
+  --secondary: #2f66d4 ;
+  --hover: #a2d9f5;
+  --black: #333;
+  --white: #fff;
+  --light-color: #666;
+  --light-bg: #eee;
+  --border:.2rem solid rgba(0,0,0,0.1);
+  --box-shadow:0 .5rem 1rem rgba(0,0,0,0.1);
+}
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin:0;
+  padding: 0;
+  box-sizing:border-box;
+  text-decoration: none;
+  text-transform: capitalize;
+  outline: none;
+  border: none;
+  transition: 0.2s linear;
+}
+
+html{
+  font-size: 62.2%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+  width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+  background: var(--primary);
+  border-radius: 5rem;
+}
+
+/* global classes */
+
+section{
+  padding: 5rem 7%;
+}
+
+.heading{
+  font-size: 4rem;
+  text-align: center;
+  color: var(--black);
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin-bottom: 3rem;
+}
+
+.btn{
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  border-radius: .5rem;
+  background: var(--primary);
+  font-size: 1.7rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.btn:hover{
+  background: var(--secondary);
+}
+
+/* header */
+.header{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top:0;
+  left: 0;
+  right: 0;
+  padding: 2rem 9%;
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+  z-index: 1000;
+}
+
+.header .logo{
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: var(--black);
+}
+
+.header .logo i{
+  color: var(--primary);
+  padding-right: .5rem;
+}
+
+.header .navbar a{
+  font-size: 1.7rem;
+  color: var(--black);
+  margin: 0 1rem;
+}
+
+.header .navbar a:hover{
+  color: var(--primary);
+}
+
+.header .btn{
+  margin-top: 0;
+}
+
+#menu-btn{
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--black);
+  margin-left: 1.7rem;
+  display: none;
+}
+
+#menu-btn:hover{
+  color: var(--primary);
+}
+
+/* end header */
+
+
+/* home */
+.home{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url(https://media.istockphoto.com/id/1276811978/photo/helping-the-needy.jpg?s=612x612&w=0&k=20&c=Ajw3t4K3Xhxh7QIM69P_nIOSjaP9f37CZpoRWPr6LBQ=) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home .content{
+  max-width: 60rem;
+  padding-top: 10rem;
+  padding-left: 6rem; /*rtl*/
+}
+
+.home .content h3{
+  font-size: 6rem;
+  color: var(--black);
+  line-height: 1.2;
+}
+
+.home .content p{
+  line-height: 2;
+  font-size: 1.5rem;
+  color: var(--light-color);
+  padding: 1rem 0;
+}
+
+.form
+{
+  font-size: 1.7rem;
+  color: var(--black);
+  margin: 0 1rem;
+}
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+/* end home */
+
+/* about us */
+
+.about .row{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.about .row .image{
+  flex: 1 1 40rem;
+}
+
+.about .row .image img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5rem;
+}
+
+.about .row .content{
+  flex: 1 1 40rem;
+}
+
+.about .row .content h3{
+  color: var(--black);
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+.about .row .content p{
+  font-size: 1.4rem;
+  color: var(--light-color);
+  padding: 1rem 0;
+  line-height: 2;
+}
+/* end about */
+
+/* services */
+.services{
+  background: var(--light-bg);
+}
+
+.services .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+  gap: 2rem;
+}
+
+.services .box-container .box{
+  padding: 4rem;
+  text-align: center;
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+  border-radius: 5rem;
+}
+
+.services .box-container .box:hover{
+  background: var(--hover);
+  cursor: context-menu;
+}
+
+.services .box-container .box img{
+  margin: 1rem 0;
+  height: 17rem;
+  border-radius: 5rem;
+}
+
+.services .box-container .box h3{
+  font-size: 2rem;
+  color: var(--black);
+  padding: 1rem 0;
+}
+
+.services .box-container .box p{
+  font-size: 1.5rem;
+  line-height: 2;
+  color: var(--light-color);
+}
+
+/* end services section */
+
+/* team section */
+
+.team .slide{
+  text-align: center;
+}
+
+.team .slide .image{
+  position: relative;
+  overflow: hidden;
+}
+
+.team .slide .image img{
+  width: 100%;
+}
+
+.team .slide .image .share{
+  padding: 2rem;
+  position: absolute;
+  bottom: -10rem;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.8);
+}
+
+.team .slide:hover .image .share{
+  bottom: 0;
+}
+
+.team .slide .image .share a{
+  font-size: 3rem;
+  margin: 0 1rem;
+  color: var(--white);
+  
+}
+
+.team .slide .image .share a:hover{
+  color: var(--secondary);
+}
+
+.team .slide .content{
+  display: flex;
+  padding-top: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.team .slide .content h3{
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.team .slide .content span{
+  font-size: 1.5rem;
+  line-height: 2;
+  color: var(--light-color);
+}
+
+/* end team section */
+
+/* pricing */
+.pricing{
+  background-color: var(--light-bg);
+}
+
+
+
+/* contact */
+.contact{
+  background: var(--light-bg);
+}
+
+.contact form{
+  padding: 2rem;
+  background: var(--white);
+  max-width: 50rem;
+  max-height: 50rem;
+  margin: 100px;
+  border-radius: .5rem;
+}
+
+.contact form span{
+  font-size: 1.7rem;
+  color: var(--primary);
+}
+
+.contact form .input-box{
+  /*display: flex;*/
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width:100px;
+  height: 100%;
+}
+.contact form .health-form{
+  width: 50px;
+  color: #333;
+  margin: 1px;
+}
+
+.contact form .input-box input{
+  padding: 1rem;
+  margin: 50px;
+  font-size: 1.7rem;
+  color: var(--black);
+  text-transform: capitalize;
+  background: var(--light-bg);
+  border-radius: .5rem;
+  height: 100%;
+  width: 100%;
+}
+
+.contact form .box{
+  margin: 100px;
+  width: 100%;
+  background: var(--light-bg);
+  border-radius: .5rem;
+  padding: 10px;
+  font-size: 10px;
+  color: black;
+  text-transform: capitalize;
+}
+.contact form .health-form{
+  width: 100px;
+  height: 100px; 
+}
+ 
+
+/* end contact */
+
+/* footer */
+ .footer{
+  text-align: center;
+}
+
+.footer .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+  gap: 2rem;
+}
+
+.footer .box-container .box h3{
+  font-size: 2.2rem;
+  padding: 1rem 0;
+  color: var(--secondary);
+}
+
+.footer .box-container .box p{
+  font-size: 1.5rem;
+  line-height: 2;
+  color: var(--light-color);
+  padding: .5rem 0;
+}
+
+.footer .box-container .box .share{
+  margin-top: 1rem;
+}
+
+.footer .box-container .box .share a{
+  height: 4.5rem;
+  width: 4.5rem;
+  background: var(--primary);
+  color: var(--white);
+  border-radius: 10%;
+  line-height: 4.5rem;
+  font-size: 1.7rem;
+  margin-right: .3rem;
+  text-align: center;
+}
+
+.footer .box-container .box .share a:hover{
+  background: var(--secondary);
+}
+
+.footer .box-container .box .link{
+  display: block;
+  font-size: 1.7rem;
+  line-height: 2;
+  color: var(--primary);
+  padding: .5rem 0;
+}
+
+.footer .box-container .box .link:hover{
+  color: var(--hover);
+}
+
+.footer .credit{
+  margin-top: 3rem;
+  padding-top: 3rem;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--primary);
+  border-top: .1rem solid var(--secondary);
+}
+
+.footer .credit i{
+  color: var(--hover);
+}
+
+.footer .credit span{
+  color: var(--secondary);
+} -->
+
+/* end footer */
+
+/* media queries */
+    </style>
+</head>
+<body>
+    /<!-- start header -->
+<header class="header">
+
+    <!--   start logo -->
+    <a href="#" class="logo">
+      <i class="fas fa-tooth"></i>
+      Health & Hygiene
+    </a>
+  
+    <!--   start navbar -->
+    <nav class="navbar">
+      <!--<a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Guidelines</a>
+      <a href="#contact">Health Tracker</a>-->
+      <a href="health.html"  style="font-size: 20px;"> Health</a>  |  
+                           <!-- <a href="#Types_of_Health"  style="font-size: 20px; color: aliceblue;">Types of Health</a> |-->
+                            <a href="hygiene1.html"  style="font-size: 20px; "> Hygiene</a>  |  
+                           <!-- <a href="#Types_of_Hygiene"  style="font-size: 20px; color: aliceblue;">Types Of Hygiene</a> | -->
+                            <a href="quiz.html"  style="font-size: 20px; "> Quiz</a>  |  
+                            <a href="bmi.html"  style="font-size: 20px; "> BMI</a>  |  
+                            <a href="save.html"  style="font-size: 20px; "> Consultancy</a>
+    </nav>
+    <!--   end navbar -->
+    
+    <div id="menu-btn" class="fas fa-bars"></div>
+  
+  </header>
+  <!-- end header -->
+  
+  <!-- start home -->
+  <section id="home" class="home">
+  
+    <div class="content">
+  
+      <h3>Lead a Happy and Healthy Life </h3>
+      <p>Personal hygiene practices contribute to overall health by reducing the chances of falling sick. Proper personal hygiene supports a strong immune system, which serves as the body’s natural defence against infections. A strong immune system, fostered by good hygiene habits, helps the body fight off infections more effectively.
+        The different types of health hygiene include Hand Hygiene, Oral Hygiene, Body Hygiene, 
+        Hair Hygiene, Nail Hygiene, Clothing And Laundry Hygiene.
+        Good hygiene helps prevent the spread of germs, which can cause illnesses that affect not 
+        only individuals but entire communities. By prioritizing hygiene, we can protect ourselves 
+        and our loved ones, ensuring a healthier and happier life. 
+        It’s important to understand that small actions, like using soap and water,
+         can make a big difference in staying well and leading a productive life.
+      </p>    
+  
+    </div>
+<div class="form">
+  <img src="photo.png" style=" padding-bottom: 3%; padding-top: 20%; width: 100%; height:550px;">
+</div>
+
+  </div>
+  </section>
+  <!-- end home -->
+  
+  <!-- about -->
+  
+  <section id="about" class="about">
+  
+    <h1 class="heading"> About us </h1>
+  
+    <!--   content -->
+    <div class="row">
+  
+      <!--     image -->
+      <div class="image">
+        <img src="food-hygiene.webp">
+      </div>
+  
+      <!--     info -->
+      <div class="content">
+        <h3>Some Care are Special And You are More Special to us...</h3>
+        <p style ="font-weight: 500;">Step into a world where we guide you 
+            towards embracing health and hygiene through nourishing your body with 
+            essential nutrients and maintaining cleanliness to empower a vibrant and 
+            wholesome lifestyle.We're a team of dedicated professionals with a mission 
+            to provide you with trustworthy and accessible information on all aspects of
+            health and hygiene. We believe that good health and proper hygiene are foundational to a happy, fulfilling life. 
+            Our goal is to provide reliable, science-backed information that helps you make informed choices about your health and well-being.</p>
+      </div>
+  
+    </div>
+  
+  </section>
+  
+  <!-- end about -->
+  
+  <!-- HEalthCare -->
+  
+  <section id="services" class="services">
+  
+    <h1 class="heading"> Guidance </h1>
+  
+    <div class="box-container">
+      <!--     start field -->
+      <div class="box">
+        <img src="food.webp">
+        <h3>Nutrition</h3>
+        <p>At the most basic level, nutrition is about eating a regular, balanced diet. Good nutrition helps fuel your body.Proper nutrition also helps protect you from illness and disease, such as heart disease, diabetes, cancer, and osteoporosis.</p>
+      </div>
+      <!--     end field -->
+  
+      <!--     start field -->
+      <div class="box">
+        <img src="exercise.webp">
+        <h3>Exercise</h3>
+        <p> Exercise is powerful medicine. Exercise is an important part of a healthy lifestyle. Exercise prevents health problems, builds strength, boosts energy.Start by exercising 2 or 3 times a week for 20 minutes at a time.</p>
+      </div>
+      <!--     end field -->
+  
+      <!--     start field -->
+      <div class="box">
+        <img src="water.jpg" alt="oral hygiene">
+        <h3>Water-intake</h3>
+        <p>Water is vital to our health. It plays a key role in many of our body’s functions, including bringing nutrients to cells, getting rid of wastes, protecting joints and organs, and maintaining body temperature.</p>
+      </div>
+      <!--     end field -->
+  
+    </div>
+  
+  </section>
+
+  <section id="hygiene-issues" class="services">
+  
+    <h1 class="heading">Hygiene Awareness</h1>
+  
+    <div class="box-container">
+      <!-- Start field for hand hygiene -->
+      <!--<div class="box">
+        <img src="hand-hygiene.jpg" alt="Hand Hygiene">
+        <h3>Hand Hygiene</h3>
+        <p>Poor hand hygiene can lead to the spread of infections like colds, flu, and foodborne illnesses. Regular handwashing with soap and water is essential for preventing these issues.</p>
+      </div>
+      End field -->
+  
+      <!-- Start field for dental hygiene -->
+      <div class="box">
+        <img src="dental .webp" alt="Dental Hygiene">
+        <h3>Dental Hygiene</h3>
+        <p>Neglecting dental hygiene can result in cavities, gum disease, and even tooth loss. Brushing twice daily and regular dental check-ups are vital for maintaining oral health.</p>
+      </div>
+      <!-- End field -->
+  
+      <!-- Start field for personal hygiene -->
+      <div class="box">
+        <img src="personal-hygiene.jpg" alt="Personal Hygiene">
+        <h3>Personal Hygiene</h3>
+        <p>Inadequate personal hygiene can lead to skin infections, body odor, and more serious health conditions. Daily bathing and clean clothing are key practices to adopt.</p>
+      </div>
+      <!-- End field -->
+  
+      <!-- Start field for food hygiene -->
+      <div class="box">
+        <img src="food2.jpg" alt="Food Hygiene">
+        <h3>Food Hygiene</h3>
+        <p>Improper food hygiene can cause foodborne illnesses such as salmonella and E. coli. Proper cooking, storage, and handling of food are crucial for health safety.</p>
+      </div>
+      <!-- End field -->
+  
+    </div>
+  
+</section>
+
+   
+ 
+  <script>
+    
+
+var swiper = new Swiper(".team-slider",{
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 20,
+    breakpoints:{
+      0: {
+      slidesPerView:1,  
+      },
+      768: {
+      slidesPerView:2,  
+      }, 
+      991: {
+      slidesPerView:3,  
+      },
+    }
+  });
+  </script>
+  
+</body>
+</html>
